@@ -3,6 +3,7 @@ import { setCredentials } from '../../features/auth/authSlice'
 import { API_URL } from '../../CONSTANTS'
 
 console.log('environment: ', process.env)
+console.log('Base API: ', API_URL[process.env.NODE_ENV])
 
 const baseQuery = fetchBaseQuery({
     baseUrl: API_URL[process.env.NODE_ENV],
