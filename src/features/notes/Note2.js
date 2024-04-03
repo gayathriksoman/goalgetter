@@ -44,10 +44,12 @@ const Note = ({ noteId }) => {
     const navigate = useNavigate()
 
     const daysOfMonth = Array.from({ length: 31 }, (_, i) => i + 1);
+    console.log(daysOfMonth)
 
     if (note) {
         const handleEdit = () => navigate(`/dash/notes/${noteId}`);
-        const days = getDaysFromTimestamps(note.days);
+        const note_days = note.days || [];
+        const days = getDaysFromTimestamps(note_days);
 
         return (
             <tr className="table__row2">
