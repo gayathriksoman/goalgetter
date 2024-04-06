@@ -16,6 +16,7 @@ const Public = () => {
                 <p>
                     💥 Get inspired by seeing what your peers are working towards and join forces to crush your goals together! 🤝 Let's make every step count. Join the movement now! #GoalGetter #DreamBigAchieveBigger 💫📈
                 </p>
+                
 
             </main>
             <footer>

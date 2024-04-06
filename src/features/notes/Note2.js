@@ -5,6 +5,8 @@ import { useUpdateNoteMutation } from "./notesApiSlice"
 
 import { useGetNotesQuery } from './notesApiSlice'
 
+import './Note2.css'
+
 function getDayFromDate(timestamp) {
     // Create a Date object from the timestamp string
     const date = new Date(timestamp);
@@ -52,34 +54,36 @@ const Note = ({ noteId }) => {
         const days = getDaysFromTimestamps(note_days);
 
         return (
-            <tr className="table__row2">
-                <td className="table__cell2 note__title">{note.title}</td>
-                <td className="table__cell2 note__username">{note.username}</td>
-                {
-                    daysOfMonth.map((day) =>
-                        days.includes(day)
-                            ? <td className="table__cell2">x</td>
-                            : <td className="table__cell2"></td>
-                    )
-                }
+            <div className="note">
+                <div className='note-header'>
+                    <h2 className="note-title">{note.title} - {note.username}</h2>
+                    <div className="note-header-right">
+                        <button
+                            className="icon-button note-edit"
+                            onClick={handleEdit}
+                        >
+                            <FontAwesomeIcon icon={faPenToSquare} />
+                        </button>
+                        <button
+                            className="note-done-button"
+                            onClick={doneToday}
+                        >
+                            Done Today
+                        </button>
+                    </div>
+                </div>
+                <div className="note-row">
+                    {
+                        daysOfMonth.map((day) =>
+                            days.includes(day)
+                                ? <div className="note-day done">{day}</div>
+                                : <div className="note-day">{day}</div>
+                        )
+                    }
+                </div>
 
-                <td className="table__cell2">
-                    <button
-                        className="icon-button table__button2"
-                        onClick={handleEdit}
-                    >
-                        <FontAwesomeIcon icon={faPenToSquare} />
-                    </button>
-                </td>
-                <td className="table__cell2">
-                    <button
-                        className="table__button2"
-                        onClick={doneToday}
-                    >
-                        Done Today
-                    </button>
-                </td>
-            </tr>
+
+            </div>
         )
 
     } else return null

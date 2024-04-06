@@ -1,0 +1,47 @@
+.note {
+    margin-bottom: 60px;
+    color: #59554a; 
+}
+
+.note-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.note-title {
+    font-weight: normal;
+}
+
+.note-header-right {
+    display: flex;
+}
+
+.note-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    background-color: #ff804d;
+    border-radius: 12px;
+    padding: 8px;
+    border: none;
+    color: #fff;
+}
+
+.note-day {
+    height: 32px;
+    width: 33px; 
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.note-day.done {
+   background-color: #59554a;
+   color: white;
+   border-radius: 32px;
+}

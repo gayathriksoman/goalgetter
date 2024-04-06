@@ -10,13 +10,13 @@
 
 :root {
   /* COLORS */
-  --BGCOLOR: #FFECD9;
-  --BORDER-COLOR: #013220;
-  --COLOR: #013220;
+  --BGCOLOR: #FFF8EE;
+  --BORDER-COLOR: #59554a;
+  --COLOR: #59554a;
   --ERROR: firebrick;
   --INACTIVE: lightgray;
-  --LINK-COLOR: #013220;
-  --LINK-HOVER: #013220;
+  --LINK-COLOR: #59554a;
+  --LINK-HOVER: #59554a;
   --NOTE-BGCOLOR: hsla(240, 64%, 27%, 0.65);
   --STATUS-COMPLETE: limegreen;
   --STATUS-OPEN: firebrick;
@@ -54,6 +54,11 @@
   place-content: center;
 }
 
+.icon-button svg {
+  height: 24px;
+  width: 24px;
+}
+
 .icon-button:hover,
 .icon-button:focus-visible {
   transform: scale(1.2);
@@ -64,9 +69,14 @@
 }
 
 /* || GENERAL STYLES */
+@font-face {
+  font-family: 'CatComic';
+  src: url('/public/cat_comic/Cat\ Comic.ttf') format('truetype');
+  /* You can add more src lines for other font variations */
+}
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'CatComic', sans-serif;
   min-height: 100vh;
   background-color: var(--BGCOLOR);
   color: var(--COLOR);
@@ -113,20 +123,25 @@ a:focus-visible {
   flex-grow: 1;
 }
 
+.public header,
+.public footer {
+  width: 80%;
+  align-self: center;
+  margin: 20px 0;
+}
+
 .public__main,
 .login {
   flex-grow: 1;
-  border-top: 2px solid var(--BORDER-COLOR);
-  border-bottom: 2px solid var(--BORDER-COLOR);
   padding: 1em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.public__addr {
-  margin-top: 1em;
-}
-
-.welcome a::before {
-  content: "➜ "
+.public__main p {
+  width: 80%;
+  align-self: center;
 }
 
 /* || DASH HEADER, CONTAINER & FOOTER */
@@ -137,8 +152,14 @@ a:focus-visible {
   z-index: 1;
   background-color: var(--BGCOLOR);
   padding: 0 0.5em;
-  border-bottom: 1px solid var(--BORDER-COLOR);
+  margin: 20px 0;
+  @media screen and (min-width: 768px) {
+    width: 80%;
+    align-self: center;
+  }
 }
+
+
 
 .dash-header__container {
   display: flex;
@@ -174,6 +195,7 @@ a:focus-visible {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
+  align-items: center;
   gap: 1em;
 }
 
@@ -286,6 +308,8 @@ a:focus-visible {
 
   .dash-container {
     padding: 1em;
+    width: 80%;
+    align-self: center;
   }
 
   .table {
@@ -306,6 +330,6 @@ table {
   border-collapse: collapse
 }
 td, th {
-  border: 1px solid #013220;
+  border: 1px solid #59554a;
   padding: 4px;
 }
