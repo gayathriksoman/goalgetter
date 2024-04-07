@@ -24,14 +24,6 @@
     flex-wrap: wrap;
 }
 
-button {
-    background-color: #ff804d;
-    border-radius: 12px;
-    padding: 8px;
-    border: none;
-    color: #fff;
-}
-
 .note-day {
     height: 32px;
     width: 33px; 
