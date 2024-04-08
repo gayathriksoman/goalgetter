@@ -30,7 +30,10 @@ const NotesList = () => {
             : null
 
         content = (
-            <div>{tableContent}</div>
+            <div className="notes_list_page">
+                <div>{tableContent}</div>
+                <img src="/yarn_catto.webp" alt="yarn_catto" className="yarn_catto" />
+            </div>
 
                     
                 

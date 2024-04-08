@@ -1,3 +1,13 @@
+.notes_list_page {
+    display: flex;
+    align-items: center;
+}
+
+.yarn_catto {
+    max-height: 200px;
+    margin: 20px;
+}
+
 .note {
     margin-bottom: 60px;
     color: #59554a; 
@@ -20,7 +30,7 @@
 
 .note-row {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 
@@ -28,6 +38,7 @@
     height: 32px;
     width: 33px; 
     font-size: 18px;
+    margin-right: 5px;
     display: flex;
     justify-content: center;
     align-items: center;

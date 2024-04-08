@@ -144,8 +144,7 @@ a:focus-visible {
   text-align: center;
 }
 
-.public__main,
-.login {
+.public__main {
   flex-grow: 1;
   padding: 1em 0;
   display: flex;
@@ -153,6 +152,29 @@ a:focus-visible {
   align-items: center;
   text-align: center;
   justify-content: center;
+}
+
+.login_page {
+  flex-grow: 1;
+  padding: 1em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 60px;
+}
+
+.login {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+
+
+
+.login_catto,
+.home_catto {
+  max-height: 200px;
+  margin: 60px;
 }
 
 .public__main button {

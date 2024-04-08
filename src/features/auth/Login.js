@@ -62,11 +62,12 @@ const Login = () => {
     if (isLoading) return <PulseLoader color={"#FFF"} />
 
     const content = (
-        <section className="public">
+        <section className="login_page">
             <header>
                 <h1>Login</h1>
             </header>
             <main className="login">
+                <>
                 <p ref={errRef} className={errClass} aria-live="assertive">{errMsg}</p>
 
                 <form className="form" onSubmit={handleSubmit}>
@@ -105,6 +106,8 @@ const Login = () => {
                         Trust This Device
                     </label>
                 </form>
+                </>
+                <img className="login_catto" src="/login_catto.webp" alt="login" />
             </main>
             <footer>
                 <Link to="/">Back to Home</Link>
