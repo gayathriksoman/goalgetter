@@ -107,7 +107,7 @@ const Login = () => {
                     </label>
                 </form>
                 </>
-                <img className="login_catto" src="/login_catto.webp" alt="login" />
+                <img className="login_catto" src={`${process.env.PUBLIC_URL}/login_catto.webp`} alt="login" />
             </main>
             <footer>
                 <Link to="/">Back to Home</Link>
