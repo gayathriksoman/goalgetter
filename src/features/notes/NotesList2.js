@@ -32,7 +32,7 @@ const NotesList = () => {
         content = (
             <div className="notes_list_page">
                 <div>{tableContent}</div>
-                <img src={`${process.env.PUBLIC_URL}/yarn_catto.webp`}  alt="yarn_catto" className="yarn_catto" />
+                <img src={`${process.env.PUBLIC_URL}/yarn_catto.png`}  alt="yarn_catto" className="yarn_catto" />
             </div>
 
                     
